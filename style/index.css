@@ -1,0 +1,233 @@
+.container {
+  width: 50vw;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "a a b" "c c b" "d d b" "e e b" "f f f";
+}
+
+div[class*=div-] {
+  gap: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.div-1 {
+  grid-area: a;
+}
+
+.div-2 {
+  grid-area: b;
+}
+
+.div-3 {
+  grid-area: c;
+}
+
+.div-4 {
+  grid-area: d;
+}
+
+.div-5 {
+  grid-area: e;
+}
+
+.div-6 {
+  grid-area: f;
+}
+
+.div-1 {
+  background-color: #f00;
+}
+
+.div-2 {
+  background-color: #0f0;
+}
+
+.div-3 {
+  background-color: #00f;
+}
+
+.div-4 {
+  background-color: #ff0;
+}
+
+.div-5 {
+  background-color: #f0f;
+}
+
+.div-6 {
+  background-color: #0ff;
+}
+
+.container-3, .container-2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container-2 {
+  width: 50vw;
+  height: 20vh;
+  background-color: #f0f0f0;
+  margin-top: 20px;
+  border: 5px solid black;
+}
+
+th {
+  text-transform: capitalize;
+}
+
+tr:nth-child(1) {
+  color: #f00;
+}
+
+tr:nth-child(2) {
+  color: #0f0;
+}
+
+tr:nth-child(3) {
+  color: #00f;
+}
+
+tr:nth-child(4) {
+  color: rgb(162, 0, 255);
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.tr-2:hover td {
+  animation: move 2s infinite;
+  border: 2px solid black;
+}
+
+@keyframes identifier {
+  0% {
+    background-color: #f00;
+  }
+  25% {
+    background-color: #0f0;
+  }
+  50% {
+    background-color: #00f;
+  }
+  75% {
+    background-color: #ff0;
+  }
+  100% {
+    background-color: #f0f;
+  }
+}
+.tr-3:hover td {
+  animation: identifier 2s infinite;
+  border: 2px solid black;
+}
+
+@keyframes moveY {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(150px);
+  }
+  75% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.tr-4:hover td {
+  animation: moveY 2s infinite ease-in-out;
+  border: 2px solid black;
+}
+
+.tr-1 td {
+  background-color: red;
+}
+
+.tr-2 td {
+  background-color: green;
+}
+
+.tr-3 td {
+  background-color: blue;
+}
+
+.tr-4 td {
+  background-color: yellow;
+}
+
+.a-1::before {
+  content: "hola";
+  margin-right: 5px;
+  color: black;
+}
+
+.a-2::before {
+  content: "adios";
+  margin-right: 5px;
+  color: black;
+}
+
+.a-3::before {
+  content: "como";
+  margin-right: 5px;
+  color: black;
+}
+
+.container-3 {
+  width: 50vw;
+  height: 30vh;
+  background-color: #f0f0f0;
+  margin-top: 20px;
+}
+
+.li-1 {
+  background-color: #f00;
+  width: 20px;
+  height: 20px;
+}
+
+.li-2 {
+  background-color: #0f0;
+  width: 40px;
+  height: 40px;
+}
+
+.li-3 {
+  background-color: #00f;
+  width: 60px;
+  height: 60px;
+}
+
+.li-4 {
+  background-color: #ff0;
+  width: 80px;
+  height: 80px;
+}
+
+.li-5 {
+  background-color: #f0f;
+  width: 100px;
+  height: 100px;
+}/*# sourceMappingURL=index.css.map */
