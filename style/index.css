@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   width: 50vw;
   height: 50vh;
@@ -197,9 +198,10 @@ tr:nth-child(4) {
 
 .container-3 {
   width: 50vw;
-  height: 30vh;
+  height: 50vh;
   background-color: #f0f0f0;
   margin-top: 20px;
+  overflow: hidden;
 }
 
 .li-1 {
@@ -230,4 +232,81 @@ tr:nth-child(4) {
   background-color: #f0f;
   width: 100px;
   height: 100px;
+}
+
+.li-1 {
+  mix-blend-mode: difference;
+}
+
+.li-2 {
+  mix-blend-mode: exclusion;
+}
+
+.li-3 {
+  mix-blend-mode: luminosity;
+}
+
+.li-4 {
+  mix-blend-mode: darken;
+}
+
+.li-5 {
+  mix-blend-mode: color-burn;
+}
+
+.boton {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background: royalblue;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* ::before - Agrega un icono antes del texto */
+.boton::before {
+  content: "🚀 ";
+}
+
+/* ::after - Agrega una flecha después del texto */
+.boton::after {
+  content: " →";
+}
+
+:root {
+  color-scheme: light;
+}
+
+input {
+  width: 300px;
+  height: 100px;
+  cursor: wait;
+}
+
+.dark {
+  color-scheme: dark;
+  cursor: help;
+}
+
+.au-Juan::after {
+  content: "Juan";
+  color: black;
+  width: 20px;
+  height: 200px;
+}
+
+.au-Pedro::after {
+  content: "Pedro";
+  color: black;
+  width: 20px;
+  height: 200px;
+}
+
+.au-Luis::after {
+  content: "Luis";
+  color: black;
+  width: 20px;
+  height: 200px;
 }/*# sourceMappingURL=index.css.map */

@@ -52,5 +52,21 @@
             <li class="li-5">cinco</li>
         </ul>
     </div>
+    <p class="au-Juan"></p>
+    <p class="au-Pedro" ></p>
+    <p class="au-Luis"></p>
+    <button class="boton">Enviar</button>
+    <input type="button" value="Cambiar modo" class="modo">
+    
+
+   
   </body>
+
+  <script>
+    let root = document.querySelector(":root");
+    let boton = document.getElementsByClassName("modo")[0];
+    boton.addEventListener('click', ()=>{
+        root.classList.toggle('dark');
+    })
+</script>
 </html>

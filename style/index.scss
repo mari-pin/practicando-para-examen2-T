@@ -168,9 +168,10 @@ $enlaces:( "hola", "adios", "como");
 .container-3{
     @extend %display;
     width: 50vw;
-    height: 30vh;
+    height: 50vh;
     background-color: #f0f0f0;
     margin-top: 20px;
+    overflow: hidden;
 }
 $size: 20px;
 $i:1;
@@ -183,3 +184,80 @@ $colores: (#f00, #0f0, #00f, #ff0, #f0f, #0ff);
        }
        $i: $i +1;
     }
+
+    .li-1{
+        mix-blend-mode: difference;
+    }
+    .li-2{
+        mix-blend-mode: exclusion;
+    }
+    .li-3{
+        mix-blend-mode: luminosity;
+    }
+    .li-4{
+        mix-blend-mode: darken;
+    }
+    .li-5{
+        mix-blend-mode: color-burn;
+    }
+
+    .boton {
+        position: relative;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background: royalblue;
+        color: white;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      
+      /* ::before - Agrega un icono antes del texto */
+      .boton::before {
+        content: "🚀 ";
+      }
+      
+      /* ::after - Agrega una flecha después del texto */
+      .boton::after {
+        content: " →";
+      }
+
+      :root{
+        color-scheme: light;
+    }
+    
+
+    
+    input{
+        width: 300px;
+        height: 100px;
+        cursor: wait;
+    }
+    
+    .dark{
+        color-scheme: dark;
+        cursor: help;
+    }
+      $theme: "light";
+
+      body{
+        @if $theme == "dark"{
+            background-color: black;
+           
+        }
+      }
+
+$autores: "Juan", "Pedro", "Luis";
+@each $autor in $autores{
+    .au-#{$autor}::after{
+        content:"#{$autor}";
+        color: black;
+        width: 20px;
+        height: 200px;
+    }
+}
+
+ 
+    
+    
+      
